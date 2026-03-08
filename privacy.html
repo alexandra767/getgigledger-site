@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - GigLedger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-deep: #0a0e1a;
+            --bg-card: #111827;
+            --teal: #0D7377;
+            --teal-light: #14b8a6;
+            --text-primary: #f0f2f5;
+            --text-secondary: #94a3b8;
+            --border: rgba(255, 255, 255, 0.06);
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        nav {
+            background: rgba(10, 14, 26, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+        }
+        .nav-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .nav-logo-icon {
+            width: 32px; height: 32px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .nav-logo-icon svg { width: 18px; height: 18px; fill: white; }
+        .nav-logo span { font-weight: 700; color: var(--text-primary); }
+        .nav-back {
+            color: var(--teal-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem 4rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .effective-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+        }
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--teal-light);
+        }
+        p, li {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
+        a { color: var(--teal-light); }
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+            </div>
+            <span>GigLedger</span>
+        </a>
+        <a href="/" class="nav-back">&larr; Back to Home</a>
+    </div>
+</nav>
+
+<div class="content">
+    <h1>Privacy Policy</h1>
+    <p class="effective-date">Effective Date: March 1, 2026</p>
+
+    <h2>Overview</h2>
+    <p>GigLedger ("we", "our", or "the App") is a personal finance tool for gig economy workers. Your privacy is important to us. This policy explains what data we collect, how it is stored, and your rights.</p>
+
+    <h2>Data We Collect</h2>
+    <p>GigLedger stores the following data that you enter:</p>
+    <ul>
+        <li>Earnings entries (amounts, dates, platforms, tips)</li>
+        <li>Mileage trips (start/end locations, distances, GPS tracks)</li>
+        <li>Expenses (amounts, categories, receipt images)</li>
+        <li>Tax records (1099 forms, quarterly payment history)</li>
+        <li>Profile information (name, email via Sign in with Apple, filing status, vehicle info)</li>
+    </ul>
+    <p>All data is created by you and stored locally on your device using Apple's SwiftData framework.</p>
+
+    <h2>No Tracking</h2>
+    <p>GigLedger does not track you. We do not collect analytics, device identifiers, advertising data, or usage statistics. Our App Privacy manifest (PrivacyInfo.xcprivacy) declares NSPrivacyTracking = false. We do not use any third-party analytics or advertising SDKs.</p>
+
+    <h2>No Third-Party Data Sharing</h2>
+    <p>We do not sell, share, or transmit your data to any third parties. Your financial information never leaves your device or your personal iCloud account.</p>
+
+    <h2>Data Storage &amp; iCloud Sync</h2>
+    <ul>
+        <li><strong>On-Device:</strong> All data is stored locally on your iPhone or iPad using SwiftData (backed by Core Data / SQLite).</li>
+        <li><strong>iCloud Sync:</strong> When you sign in with Apple, your data may sync across your devices via your personal iCloud account. This sync is handled entirely by Apple's CloudKit framework. We do not operate any servers and do not have access to your iCloud data.</li>
+        <li><strong>Encryption:</strong> Data at rest on your device is protected by iOS Data Protection. iCloud data is encrypted in transit and at rest by Apple.</li>
+    </ul>
+
+    <h2>Location Data</h2>
+    <p>GigLedger requests location access only for GPS mileage tracking. Location data is used solely to record trip routes and calculate distances. Location data is stored locally on your device and in your personal iCloud account — it is never sent to us or any third party. You can use the app without granting location access by logging trips manually.</p>
+
+    <h2>Camera &amp; Photos</h2>
+    <p>GigLedger may request camera access to scan receipts and tax documents. Scanned images are stored locally on your device. We do not upload images to any external server.</p>
+
+    <h2>Your Rights</h2>
+    <p>You have full control over your data:</p>
+    <ul>
+        <li><strong>Export:</strong> You can export all your data (CSV, PDF) from Settings &rarr; Export Data at any time.</li>
+        <li><strong>Delete:</strong> You can delete all data from Settings &rarr; Delete All Data. This permanently removes everything from your device.</li>
+        <li><strong>iCloud Removal:</strong> To remove synced data from iCloud, use Settings &rarr; Delete All Data or manage iCloud storage in iOS Settings.</li>
+    </ul>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be reflected in the app with an updated effective date. Continued use of the app after changes constitutes acceptance of the revised policy.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this Privacy Policy or your data, please contact us at <a href="mailto:gigledger.help@gmail.com">gigledger.help@gmail.com</a>.</p>
+</div>
+
+<footer>&copy; 2026 GigLedger. All rights reserved.</footer>
+</body>
+</html>

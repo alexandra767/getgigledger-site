@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigLedger - Gig Worker Tax Tracker for DoorDash, Uber & Instacart | iOS App</title>
+    <meta name="description" content="GigLedger is the iOS app for gig workers to track earnings, GPS mileage, expenses, and tax deductions. Built for DoorDash, Uber, Instacart, Lyft, and Grubhub drivers. 7-day free trial, then $4.99/mo. Schedule C preview, quarterly reminders, and 100% private local storage.">
+    <meta name="keywords" content="gig worker tax app, DoorDash tax tracker, Uber mileage tracker, gig economy tax deductions, self-employment tax calculator, Schedule C app, mileage tracker app, 1099 tax app, delivery driver expenses, quarterly tax reminders, gig income tracker, freelancer tax app 2026">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="Jy-MXIa5Zm4yDnbtlQE43JE63dM-_mLt7tMDbUUXVkA" />
+    <link rel="canonical" href="https://getgigledger.com">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GigLedger - Gig Worker Tax Tracker for Earnings, Mileage & Deductions">
+    <meta property="og:description" content="Track gig earnings, GPS mileage, expenses, and tax deductions in one app. Built for DoorDash, Uber, Instacart, and all gig workers. 7-day free trial. 100% private.">
+    <meta property="og:image" content="https://getgigledger.com/images/og-banner.png">
+    <meta property="og:url" content="https://getgigledger.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GigLedger">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GigLedger - Gig Worker Tax Tracker for Earnings, Mileage & Deductions">
+    <meta name="twitter:description" content="Track gig earnings, GPS mileage, expenses, and tax deductions in one app. Built for DoorDash, Uber, Instacart, and all gig workers.">
+    <meta name="twitter:image" content="https://getgigledger.com/images/og-banner.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "GigLedger - Gig Worker Tax Tracker",
+        "operatingSystem": "iOS",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "4.99",
+            "priceCurrency": "USD",
+            "description": "7-day free trial, then $4.99/month or $39.99/year"
+        },
+        "description": "Track gig earnings, GPS mileage, expenses, and tax deductions. Built for DoorDash, Uber, Instacart, Lyft, and Grubhub drivers. Schedule C preview, quarterly reminders, and 100% private local storage.",
+        "screenshot": "https://getgigledger.com/images/og-banner.png",
+        "url": "https://getgigledger.com",
+        "author": {
+            "@type": "Organization",
+            "name": "GigLedger"
+        },
+        "featureList": "Earnings Tracking, GPS Mileage Tracking, Expense & Receipt Scanner, Real-Time Tax Estimates, Schedule C Preview PDF, Quarterly Payment Reminders, 1099 Form Management, iCloud Sync, CSV Import/Export, Tax Prep Package, Health Insurance Deduction, Vehicle Depreciation Calculator, Maintenance Tracker, What-If Tax Planner, Recurring Expenses, TurboTax CSV Export, Apple Watch Companion, Stacked Order Detection, Daily Mileage Summary Notifications, Tracking Health Indicator"
+    }
+    </script>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much does GigLedger cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GigLedger offers a 7-day free trial with full access to all features. After the trial, it's $4.99/month or $39.99/year (save 33%). No ads, no data selling, and no hidden fees."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What gig platforms does GigLedger support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GigLedger supports all major gig platforms including DoorDash, Uber, Uber Eats, Lyft, Instacart, Grubhub, Amazon Flex, Spark, and more. You can also add custom platforms for any 1099 work."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does mileage tracking work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GigLedger offers automatic GPS trip detection that records your route, distance, and calculates your IRS standard mileage deduction ($0.725/mile for 2026). It detects delivery stops and splits multi-stop trips automatically. You can also log trips manually."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my financial data safe?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GigLedger stores all data locally on your device. Nothing is sent to external servers. Optional iCloud sync uses your personal Apple iCloud account. There is no tracking, no ads, and no third-party data sharing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can GigLedger help me file my taxes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "GigLedger generates a Schedule C preview PDF organized by IRS line items that you can share with your tax preparer. It also calculates estimated self-employment tax, federal, state, and local taxes in real time, and reminds you of quarterly payment deadlines."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much should I set aside for taxes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most gig workers should set aside 25-30% of their gross earnings for taxes. This covers self-employment tax (15.3%), federal income tax, and state/local taxes. GigLedger calculates your exact set-aside amount after every dash based on your actual tax situation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does GigLedger work with multiple gig platforms?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. GigLedger supports DoorDash, Uber, Uber Eats, Lyft, Instacart, Grubhub, Amazon Flex, Spark, and any other 1099 gig platform. All earnings are combined for your tax calculations and Schedule C, and you can filter by platform anytime."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are quarterly estimated tax payments?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "If you expect to owe more than $1,000 in taxes for the year, the IRS requires you to make quarterly estimated payments (due in April, June, September, and January). GigLedger tracks your quarterly liability and sends reminders before each deadline so you never miss a payment."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I import my DoorDash earnings from a screenshot?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Just screenshot your DoorDash earnings summary screen and import it into GigLedger. The built-in OCR automatically extracts your base pay, tips, number of deliveries, and active time. You can import multiple screenshots per day and merge them into one daily entry."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-deep: #0a0e1a;
+            --bg-card: #111827;
+            --bg-card-hover: #1a2332;
+            --teal: #0D7377;
+            --teal-light: #14b8a6;
+            --amber: #F59E0B;
+            --green: #10B981;
+            --red: #EF4444;
+            --blue: #3b82f6;
+            --purple: #8b5cf6;
+            --text-primary: #f0f2f5;
+            --text-secondary: #94a3b8;
+            --border: rgba(255, 255, 255, 0.06);
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ── Navigation ── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1rem 2rem;
+            transition: all 0.3s ease;
+        }
+        nav.scrolled {
+            background: rgba(10, 14, 26, 0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .nav-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .nav-logo-icon svg { width: 20px; height: 20px; fill: white; }
+        .nav-logo span {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+        }
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--text-primary); }
+        .nav-cta {
+            background: var(--teal) !important;
+            color: white !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            transition: all 0.3s !important;
+        }
+        .nav-cta:hover { background: var(--teal-light) !important; transform: translateY(-1px); }
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 80%;
+            height: 100%;
+            background: radial-gradient(ellipse, rgba(13, 115, 119, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            right: -20%;
+            width: 60%;
+            height: 80%;
+            background: radial-gradient(ellipse, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(13, 115, 119, 0.12);
+            border: 1px solid rgba(13, 115, 119, 0.25);
+            border-radius: 50px;
+            padding: 6px 16px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--teal-light);
+            margin-bottom: 1.5rem;
+        }
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--green);
+            border-radius: 50%;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero h1 em {
+            font-style: normal;
+            background: linear-gradient(135deg, var(--teal-light), var(--amber));
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            max-width: 480px;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            color: white;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(13, 115, 119, 0.3); }
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text-primary);
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-2px); }
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+        }
+        .hero-stat {
+            border-right: 1px solid var(--border);
+            padding-right: 2.5rem;
+        }
+        .hero-stat:last-child { border-right: none; padding-right: 0; }
+        .hero-stat-value {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--teal-light);
+        }
+        .hero-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 2px;
+        }
+
+        /* Phone mockup */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .phone-mockup {
+            width: 280px;
+            border-radius: 40px;
+            overflow: hidden;
+            border: 4px solid #2a2a3a;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), 0 0 60px rgba(13, 115, 119, 0.1);
+            position: relative;
+            background: #000;
+        }
+        .phone-mockup img {
+            width: 100%;
+            display: block;
+            transition: opacity 0.6s ease;
+        }
+        .phone-mockup-secondary {
+            position: absolute;
+            right: -60px;
+            top: 60px;
+            width: 240px;
+            border-radius: 36px;
+            overflow: hidden;
+            border: 3px solid #2a2a3a;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            background: #000;
+            transform: rotate(3deg);
+        }
+        .phone-mockup-secondary img { width: 100%; display: block; }
+
+        /* ── Features ── */
+        .features {
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--teal-light);
+            margin-bottom: 1rem;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 3rem;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(13, 115, 119, 0.3);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            font-size: 1.5rem;
+        }
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .feature-card p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* ── Showcase ── */
+        .showcase {
+            padding: 5rem 2rem;
+        }
+        .showcase-row {
+            max-width: 1200px;
+            margin: 0 auto 6rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .showcase-row.reversed { direction: rtl; }
+        .showcase-row.reversed > * { direction: ltr; }
+        .showcase-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .showcase-text p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .showcase-list { list-style: none; }
+        .showcase-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .showcase-list li::before {
+            content: '✓';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--green);
+            border-radius: 50%;
+            font-size: 0.7rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .showcase-phones {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .showcase-phone {
+            width: 220px;
+            border-radius: 32px;
+            overflow: hidden;
+            border: 3px solid #2a2a3a;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            background: #000;
+        }
+        .showcase-phone:nth-child(2) { transform: translateY(30px); }
+        .showcase-phone img { width: 100%; display: block; }
+
+        /* ── Gallery ── */
+        .gallery {
+            padding: 5rem 0;
+            overflow: hidden;
+        }
+        .gallery .section-inner {
+            padding: 0 2rem;
+            margin-bottom: 2rem;
+        }
+        .gallery-track {
+            display: flex;
+            gap: 1.5rem;
+            animation: scroll-gallery 40s linear infinite;
+            width: max-content;
+        }
+        .gallery-track:hover { animation-play-state: paused; }
+        .gallery-item {
+            width: 220px;
+            flex-shrink: 0;
+            border-radius: 28px;
+            overflow: hidden;
+            border: 3px solid #2a2a3a;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            background: #000;
+        }
+        .gallery-item:hover { transform: scale(1.03); }
+        .gallery-item img { width: 100%; display: block; }
+        @keyframes scroll-gallery {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ── CTA ── */
+        .cta-section {
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(ellipse, rgba(13, 115, 119, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .cta-section p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+        .cta-section .btn-primary { position: relative; }
+
+        /* ── Footer ── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .footer-brand span { font-weight: 600; font-size: 0.95rem; }
+        .footer-links { display: flex; gap: 2rem; }
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--text-primary); }
+        .footer-copy {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        /* ── Why Section ── */
+        .why-section { padding: 6rem 2rem; }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .why-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .why-card:hover {
+            border-color: rgba(13, 115, 119, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+        .why-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .why-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+        .why-icon { margin-bottom: 1rem; }
+
+        /* ── Trust Bar ── */
+        .trust-bar {
+            padding: 3rem 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .trust-items {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .trust-item svg { width: 20px; height: 20px; color: var(--green); flex-shrink: 0; }
+
+        /* ── FAQ ── */
+        .faq-section { padding: 6rem 2rem; }
+        .faq-list {
+            max-width: 760px;
+            margin: 3rem auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+        .faq-item:hover { border-color: rgba(13, 115, 119, 0.3); }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            padding: 1.25rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+        .faq-question svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--text-secondary); transition: transform 0.3s; }
+        .faq-item.active .faq-question svg { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .faq-answer-inner {
+            padding: 0 1.5rem 1.25rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        .faq-item.active .faq-answer { max-height: 300px; }
+
+        /* ── Email Signup Form ── */
+        .waitlist-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 480px;
+            margin: 1.5rem auto 0;
+        }
+        .waitlist-form input[type="email"] {
+            flex: 1;
+            padding: 0.85rem 1.25rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.08);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .waitlist-form input[type="email"]::placeholder {
+            color: var(--text-secondary);
+        }
+        .waitlist-form input[type="email"]:focus {
+            border-color: var(--teal-light);
+        }
+        .waitlist-form button {
+            padding: 0.85rem 1.75rem;
+            border-radius: 12px;
+            border: none;
+            background: linear-gradient(135deg, var(--teal), var(--teal-light));
+            color: white;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            white-space: nowrap;
+        }
+        .waitlist-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(13, 115, 119, 0.4);
+        }
+        .waitlist-success {
+            display: none;
+            color: var(--green);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+        .waitlist-privacy {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.75rem;
+        }
+
+        /* ── Coming Soon Banner ── */
+        .coming-soon-note {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* ── Fade-in animations ── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 1024px) {
+            .hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .hero-subtitle { margin-left: auto; margin-right: auto; }
+            .hero-ctas { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .hero-visual { margin-top: 3rem; }
+            .phone-mockup-secondary { right: -30px; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .showcase-row, .showcase-row.reversed { grid-template-columns: 1fr; text-align: center; direction: ltr; }
+            .showcase-phones { justify-content: center; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            nav.menu-open .nav-links {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 14, 26, 0.95);
+                backdrop-filter: blur(20px);
+                padding: 1rem 2rem 1.5rem;
+                border-bottom: 1px solid var(--border);
+            }
+            .hero { padding-top: 7rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .hero-stats { flex-direction: column; gap: 1rem; align-items: center; }
+            .hero-stat { border-right: none; padding-right: 0; }
+            .features-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+            .phone-mockup { width: 240px; }
+            .phone-mockup-secondary { width: 200px; right: -20px; top: 40px; }
+            .showcase-phone { width: 170px; }
+            .cta-section h2 { font-size: 2rem; }
+            .footer-inner { flex-direction: column; text-align: center; }
+            .why-grid { grid-template-columns: 1fr; }
+            .trust-items { gap: 1.5rem; justify-content: flex-start; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2rem; }
+            .hero-ctas { flex-direction: column; }
+            .waitlist-form { flex-direction: column; }
+            .phone-mockup { width: 220px; }
+            .phone-mockup-secondary { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+            </div>
+            <span>GigLedger</span>
+        </a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#faq">FAQ</a>
+            <a href="#guides">Guides</a>
+            <a href="#download" class="nav-cta">Get Notified</a>
+        </div>
+        <button class="mobile-toggle" onclick="document.getElementById('navbar').classList.toggle('menu-open')">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge">Built for Gig Workers</div>
+            <h1>Track. Deduct.<br><em>Save.</em></h1>
+            <p class="hero-subtitle">
+                The smartest way to track your gig income, mileage, and tax deductions.
+                Built for DoorDash, Uber, Instacart, Lyft, and every gig platform.
+            </p>
+            <div class="hero-ctas">
+                <a href="#download" class="btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    Launching Soon on iOS
+                </a>
+                <a href="#features" class="btn-secondary">See Features</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">$0.725</div>
+                    <div class="hero-stat-label">Per Mile Deduction (2026)</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">15.3%</div>
+                    <div class="hero-stat-label">SE Tax Tracking</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">100%</div>
+                    <div class="hero-stat-label">Private & Local</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual fade-up">
+            <div class="phone-mockup">
+                <img src="images/dashboard.png" alt="GigLedger gig worker dashboard showing earnings, mileage, and tax deduction summary" id="hero-screenshot">
+            </div>
+            <div class="phone-mockup-secondary">
+                <img src="images/earnings.png" alt="GigLedger multi-platform earnings tracker for DoorDash, Uber, and Instacart">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features -->
+<section class="features" id="features">
+    <div class="section-inner">
+        <div class="section-label">Features</div>
+        <h2 class="section-title">Everything you need<br>at tax time.</h2>
+        <p class="section-subtitle">GigLedger puts your earnings, mileage, expenses, and tax estimates all in one place.</p>
+
+        <div class="features-grid">
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(13, 115, 119, 0.12);">
+                    <span style="color: var(--teal-light);">$</span>
+                </div>
+                <h3>Track Earnings</h3>
+                <p>Log income from DoorDash, Uber, Instacart, Lyft, Grubhub, and more. Filter by platform and month with collapsible daily breakdowns.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12);">
+                    <span style="color: var(--green);">&#9741;</span>
+                </div>
+                <h3>Auto Mileage Tracking</h3>
+                <p>Automatic GPS trip detection while you drive. Tracks routes, calculates deductions at the 2026 IRS rate ($0.725/mi), and maps every trip.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(245, 158, 11, 0.12);">
+                    <span style="color: var(--amber);">&#9783;</span>
+                </div>
+                <h3>Expense Tracking</h3>
+                <p>Log deductible expenses like gas, phone bills, insurance, and car repairs. Scan receipts and view them full-screen anytime.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(139, 92, 246, 0.12);">
+                    <span style="color: var(--purple);">&#9881;</span>
+                </div>
+                <h3>Tax Estimates</h3>
+                <p>Real-time SE tax, federal, state, and local tax calculations. PA state tax, local EIT, and quarterly payment tracking built in.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(59, 130, 246, 0.12);">
+                    <span style="color: var(--blue);">&#9783;</span>
+                </div>
+                <h3>Schedule C Preview</h3>
+                <p>Generate a real-time Schedule C preview organized by IRS line items. Export as PDF or TurboTax CSV for your tax preparer.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(239, 68, 68, 0.12);">
+                    <span style="color: var(--red);">&#9888;</span>
+                </div>
+                <h3>Screenshot Import</h3>
+                <p>Snap a photo of your DoorDash earnings screen. OCR extracts base pay, tips, deliveries, and time automatically.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(13, 115, 119, 0.12);">
+                    <span style="color: var(--teal-light);">&#128247;</span>
+                </div>
+                <h3>Receipt Scanner</h3>
+                <p>Snap photos of gas receipts and 1099 forms. OCR detects the type and extracts amounts, vendors, and dates automatically.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12);">
+                    <span style="color: var(--green);">&#128274;</span>
+                </div>
+                <h3>100% Private</h3>
+                <p>All data stored locally on your device. No tracking, no ads, no third-party data sharing. Your finances stay yours.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(245, 158, 11, 0.12);">
+                    <span style="color: var(--amber);">&#9729;</span>
+                </div>
+                <h3>Merge & Organize</h3>
+                <p>Scanned multiple screenshots from one dash? Merge same-day entries with one tap. Collapsible daily views keep everything tidy.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(245, 158, 11, 0.12);">
+                    <span style="color: var(--amber);">&#128230;</span>
+                </div>
+                <h3>Tax Prep Package</h3>
+                <p>Generate a complete, accountant-ready tax packet with Schedule C, mileage log, expense breakdown, 1099s, and quarterly payments — all in one PDF or TurboTax CSV.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(6, 182, 212, 0.12);">
+                    <span style="color: #06B6D4;">&#10084;</span>
+                </div>
+                <h3>Health Insurance Deduction</h3>
+                <p>Self-employed? Deduct 100% of your health insurance premiums. GigLedger calculates your Form 1040 Line 17 deduction and includes it in tax estimates.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12);">
+                    <span style="color: var(--green);">&#128663;</span>
+                </div>
+                <h3>Vehicle Depreciation</h3>
+                <p>MACRS 5-year depreciation schedule with Section 179 option. Compare Standard Mileage vs. Actual Expense methods to maximize your deduction.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12);">
+                    <span style="color: var(--green);">&#128295;</span>
+                </div>
+                <h3>Maintenance Tracker</h3>
+                <p>Log oil changes, tires, brakes, and more with receipt scanning. Auto-creates linked expense entries for tax deductions with overdue service alerts.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(249, 115, 22, 0.12);">
+                    <span style="color: #F97316;">&#9776;</span>
+                </div>
+                <h3>What-If Tax Planner</h3>
+                <p>Project your tax liability under different scenarios. Adjust income, deductions, and filing status to plan ahead and optimize quarterly payments.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(139, 92, 246, 0.12);">
+                    <span style="color: var(--purple);">&#128257;</span>
+                </div>
+                <h3>Recurring Expenses</h3>
+                <p>Set up weekly, monthly, or yearly expenses once and GigLedger logs them automatically. Perfect for phone bills, insurance, and subscriptions.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(59, 130, 246, 0.12);">
+                    <span style="color: var(--blue);">&#9201;</span>
+                </div>
+                <h3>Apple Watch App</h3>
+                <p>Track your dash from your wrist. See live miles, GPS status, and delivery count. Tap "Delivery Done" without pulling out your phone.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Showcase: Dashboard & Earnings -->
+<section class="showcase">
+    <div class="showcase-row fade-up">
+        <div class="showcase-text">
+            <h3>Know your numbers<br>at a glance.</h3>
+            <p>Your dashboard shows total earnings, net profit, mileage deductions, and estimated tax at a glance. Drill into per-delivery breakdowns with avg/hour and avg/delivery stats.</p>
+            <ul class="showcase-list">
+                <li>Multi-platform earnings with daily breakdowns</li>
+                <li>Scan DoorDash screenshots to import earnings</li>
+                <li>Merge same-day entries from multiple screenshots</li>
+                <li>CSV import from DoorDash, Uber, and Solo</li>
+            </ul>
+        </div>
+        <div class="showcase-phones">
+            <div class="showcase-phone"><img src="images/dashboard-new.png" alt="GigLedger dashboard showing total earnings, net profit, mileage deduction, and tax overview"></div>
+            <div class="showcase-phone"><img src="images/earnings-new.png" alt="GigLedger earnings tracking with per-delivery breakdown and platform filter"></div>
+        </div>
+    </div>
+
+    <div class="showcase-row reversed fade-up">
+        <div class="showcase-text">
+            <h3>Every mile is<br>money saved.</h3>
+            <p>Automatic GPS trip detection while you drive. GigLedger records your route, maps every trip, and calculates deductions at the 2026 IRS rate.</p>
+            <ul class="showcase-list">
+                <li>Auto-tracking detects driving automatically</li>
+                <li>IRS standard mileage rate ($0.725/mi for 2026)</li>
+                <li>Route maps with start/end addresses</li>
+                <li>Collapsible daily trip groups</li>
+            </ul>
+        </div>
+        <div class="showcase-phones">
+            <div class="showcase-phone"><img src="images/mileage-new.png" alt="GigLedger mileage tracker with auto-tracking, GPS route maps, and IRS deduction calculator"></div>
+            <div class="showcase-phone"><img src="images/expenses-new.png" alt="GigLedger expense tracker with receipt scanning and category filters"></div>
+        </div>
+    </div>
+
+    <div class="showcase-row fade-up">
+        <div class="showcase-text">
+            <h3>Tax time,<br>without the stress.</h3>
+            <p>GigLedger estimates your self-employment tax, federal income tax, state tax, and local EIT in real time. Export a Schedule C preview, tax packet PDF, or TurboTax CSV.</p>
+            <ul class="showcase-list">
+                <li>SE tax, federal, state, and local estimates</li>
+                <li>Quarterly payment tracking and reminders</li>
+                <li>One-tap tax packet PDF or TurboTax CSV export</li>
+                <li>Vehicle depreciation &amp; maintenance tracking</li>
+                <li>Health insurance deduction &amp; What-If planner</li>
+            </ul>
+        </div>
+        <div class="showcase-phones">
+            <div class="showcase-phone"><img src="images/tax-center-new.png" alt="GigLedger tax center with SE tax, state tax, local EIT, quarterly payments, and filing tools"></div>
+            <div class="showcase-phone"><img src="images/deductions.png" alt="GigLedger deduction breakdown for gig worker expenses"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery" id="screenshots">
+    <div class="section-inner">
+        <div class="section-label">Screenshots</div>
+        <h2 class="section-title">See it in action.</h2>
+    </div>
+    <div class="gallery-track">
+        <div class="gallery-item"><img src="images/dashboard-new.png" alt="GigLedger dashboard with earnings, net profit, mileage deduction, and tax overview" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/earnings-new.png" alt="GigLedger earnings tracker with per-delivery breakdown and platform filters" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/mileage-new.png" alt="GigLedger auto mileage tracking with GPS route maps and IRS deduction" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/expenses-new.png" alt="GigLedger expense tracker with receipt scanning and category filters" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/tax-center-new.png" alt="GigLedger tax center with SE tax, state tax, local EIT, and filing tools" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/welcome.png" alt="GigLedger welcome screen for gig economy workers" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/login.png" alt="GigLedger Sign in with Apple login" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/deductions.png" alt="GigLedger tax deduction suggestions and tracker" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/gps.png" alt="GigLedger GPS trip tracking for delivery drivers" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/1099-forms.png" alt="GigLedger 1099-NEC form management" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/log-trip.png" alt="GigLedger manual trip logging with mileage calculation" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/watch-summary.png" alt="GigLedger Apple Watch daily summary showing earnings, miles, and trips" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/watch-active-trip.png" alt="GigLedger Apple Watch active trip with GPS status, miles, and Delivery Done button" loading="lazy"></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="gallery-item"><img src="images/dashboard-new.png" alt="GigLedger dashboard" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/earnings-new.png" alt="GigLedger earnings" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/mileage-new.png" alt="GigLedger mileage" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/expenses-new.png" alt="GigLedger expenses" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/tax-center-new.png" alt="GigLedger tax center" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/welcome.png" alt="GigLedger welcome" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/login.png" alt="GigLedger login" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/deductions.png" alt="GigLedger deductions" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/gps.png" alt="GigLedger GPS tracking" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/1099-forms.png" alt="GigLedger 1099 forms" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/log-trip.png" alt="GigLedger log trip" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/watch-summary.png" alt="GigLedger Watch summary" loading="lazy"></div>
+        <div class="gallery-item"><img src="images/watch-active-trip.png" alt="GigLedger Watch active trip" loading="lazy"></div>
+    </div>
+</section>
+
+<!-- Why GigLedger -->
+<section class="why-section">
+    <div class="section-inner">
+        <div class="section-label">Why GigLedger</div>
+        <h2 class="section-title">Built for gig workers,<br>not accountants.</h2>
+        <p class="section-subtitle">Other apps are either too complex or way overpriced. GigLedger does exactly what you need -- starting at $4.99/mo with a free 7-day trial.</p>
+        <div class="why-grid">
+            <div class="why-card fade-up">
+                <div class="why-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--teal-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3>vs. QuickBooks Self-Employed</h3>
+                <p>QuickBooks charges $15+/month. GigLedger is just $4.99/mo with the same core features -- earnings, mileage, expenses, and Schedule C. Try it free for 7 days.</p>
+            </div>
+            <div class="why-card fade-up">
+                <div class="why-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3>vs. Stride / Everlance</h3>
+                <p>Stride and Everlance sell your data to insurance companies and tax services. GigLedger stores everything locally on your device. Zero tracking, zero data sharing.</p>
+            </div>
+            <div class="why-card fade-up">
+                <div class="why-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                </div>
+                <h3>vs. MileIQ</h3>
+                <p>MileIQ only tracks mileage for $5.99/mo. GigLedger tracks mileage plus earnings, expenses, tax estimates, and generates Schedule C -- all for $4.99/mo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Bar -->
+<div class="trust-bar">
+    <div class="trust-items">
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            100% local storage -- your data never leaves your device
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            No ads, no tracking, no data selling
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            iCloud sync via your personal Apple account
+        </div>
+        <div class="trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            7-day free trial -- then $4.99/mo or $39.99/yr
+        </div>
+    </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+    <div class="section-inner">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Common Questions</h2>
+        <p class="section-subtitle">Everything gig workers need to know.</p>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How much does GigLedger cost?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">GigLedger offers a 7-day free trial with full access to every feature. After the trial, choose Monthly ($4.99/mo) or Yearly ($39.99/yr -- save 33%). No ads, no data selling, and no hidden fees. All features are included with both plans.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What gig platforms does GigLedger support?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">GigLedger supports all major gig platforms including DoorDash, Uber, Uber Eats, Lyft, Instacart, Grubhub, Amazon Flex, Spark, and more. You can also add custom platforms for any 1099 contract work.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How does mileage tracking work?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">GigLedger offers GPS-based automatic trip tracking that records your route, distance, and calculates your IRS standard mileage deduction ($0.725/mile for 2026). It detects delivery stops, splits multi-stop trips automatically, and even works when the app is in the background. You can also log trips manually.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Is my financial data safe?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">All data is stored locally on your device using Apple's SwiftData framework. Nothing is sent to external servers. Optional iCloud sync uses your personal Apple account. There is no tracking, no ads, and no third-party data sharing.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Can GigLedger help me file my taxes?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">GigLedger generates a Schedule C preview PDF organized by IRS line items that you can share with your tax preparer. It calculates estimated self-employment tax, federal, state, and local taxes in real time, and reminds you of quarterly payment deadlines.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How much should I set aside for taxes?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Most gig workers should set aside 25-30% of their gross earnings for taxes. This covers self-employment tax (15.3%), federal income tax, and state/local taxes. GigLedger calculates your exact set-aside amount after every dash based on your actual tax situation.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Does GigLedger work with multiple gig platforms?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Yes. GigLedger supports DoorDash, Uber, Uber Eats, Lyft, Instacart, Grubhub, Amazon Flex, Spark, and any other 1099 gig platform. All earnings are combined for your tax calculations and Schedule C, and you can filter by platform anytime.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What are quarterly estimated tax payments?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">If you expect to owe more than $1,000 in taxes for the year, the IRS requires you to make quarterly estimated payments (due in April, June, September, and January). GigLedger tracks your quarterly liability and sends reminders before each deadline so you never miss a payment.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Can I import my DoorDash earnings from a screenshot?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Yes. Just screenshot your DoorDash earnings summary screen and import it into GigLedger. The built-in OCR automatically extracts your base pay, tips, number of deliveries, and active time. You can import multiple screenshots per day and merge them into one daily entry.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Guides -->
+<section class="why-section" id="guides">
+    <div class="section-inner">
+        <div class="section-label">Tax Guides</div>
+        <h2 class="section-title">Free guides for gig workers.</h2>
+        <p class="section-subtitle">Everything you need to know about taxes, mileage, and deductions as an independent contractor.</p>
+        <div class="why-grid">
+            <a href="/blog-doordash-tax-deductions.html" class="why-card fade-up" style="text-decoration: none; color: inherit;">
+                <div class="why-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--teal-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3>DoorDash Tax Deductions 2026</h3>
+                <p>Every deduction DoorDash drivers can claim -- mileage, phone, car expenses, hot bags, health insurance, and more. With real examples.</p>
+            </a>
+            <a href="/blog-mileage-tracking-gig-workers.html" class="why-card fade-up" style="text-decoration: none; color: inherit;">
+                <div class="why-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3>How to Track Mileage (IRS-Compliant)</h3>
+                <p>What miles count, IRS log requirements, standard vs. actual expenses, and how GPS auto-tracking works. Save $270 per 1,000 miles.</p>
+            </a>
+            <a href="/blog-self-employment-tax-guide.html" class="why-card fade-up" style="text-decoration: none; color: inherit;">
+                <div class="why-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                </div>
+                <h3>1099 Self-Employment Tax Guide</h3>
+                <p>How the 15.3% SE tax works, quarterly payments, Schedule C explained, and real examples of how much gig workers actually owe.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="download">
+    <h2>Ready to keep more<br>of what you earn?</h2>
+    <p>GigLedger is launching soon on the App Store. Be the first to know when it drops -- sign up and we'll notify you on launch day.</p>
+    <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="waitlist-form" id="waitlist-form">
+        <input type="hidden" name="form-name" value="waitlist">
+        <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Notify Me</button>
+    </form>
+    <div class="waitlist-success" id="waitlist-success">You're on the list! We'll email you on launch day.</div>
+    <p class="waitlist-privacy">No spam, ever. Just one email when GigLedger hits the App Store.</p>
+    <div class="coming-soon-note">Launching Spring 2026 -- Currently finishing Apple review</div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="nav-logo-icon" style="width:28px;height:28px;border-radius:8px;">
+                <svg viewBox="0 0 24 24" style="width:16px;height:16px;" fill="white"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
+            </div>
+            <span>GigLedger</span>
+        </div>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+            <a href="mailto:gigledger.help@gmail.com">Contact</a>
+        </div>
+        <div class="footer-copy">&copy; 2026 GigLedger. All rights reserved.</div>
+    </div>
+</footer>
+
+<script>
+    // Sticky nav
+    window.addEventListener('scroll', () => {
+        document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+        const item = btn.parentElement;
+        const wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item.active').forEach(el => el.classList.remove('active'));
+        if (!wasActive) item.classList.add('active');
+    }
+
+    // Waitlist form submission
+    const waitlistForm = document.getElementById('waitlist-form');
+    if (waitlistForm) {
+        waitlistForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(waitlistForm);
+            fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams(formData).toString()
+            }).then(() => {
+                waitlistForm.style.display = 'none';
+                document.getElementById('waitlist-success').style.display = 'block';
+            }).catch(() => {
+                alert('Something went wrong. Please try again or email gigledger.help@gmail.com');
+            });
+        });
+    }
+
+    // Hero screenshot rotation
+    const heroScreenshots = ['images/dashboard.png', 'images/earnings.png', 'images/mileage.png', 'images/tax-center.png', 'images/deductions.png'];
+    let heroIndex = 0;
+    setInterval(() => {
+        heroIndex = (heroIndex + 1) % heroScreenshots.length;
+        const img = document.getElementById('hero-screenshot');
+        img.style.opacity = '0';
+        setTimeout(() => {
+            img.src = heroScreenshots[heroIndex];
+            img.style.opacity = '1';
+        }, 300);
+    }, 4000);
+</script>
+
+</body>
+</html>
