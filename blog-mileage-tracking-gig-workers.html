@@ -41,6 +41,17 @@
     }
     </script>
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gigledger.org/" },
+            { "@type": "ListItem", "position": 2, "name": "Mileage Tracking for Gig Workers", "item": "https://gigledger.org/blog-mileage-tracking-gig-workers.html" }
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
@@ -84,6 +95,17 @@
         .comparison-table th, .comparison-table td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
         .comparison-table th { color: var(--teal-light); font-weight: 600; font-size: 0.9rem; }
         .comparison-table td { color: var(--text-secondary); font-size: 0.9rem; }
+        .related-articles { margin: 3rem 0 1rem; }
+        .related-articles h3 { color: var(--text-primary); margin-bottom: 1rem; font-size: 1.2rem; }
+        .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
+        .related-card {
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px;
+            padding: 1.25rem; text-decoration: none; transition: border-color 0.2s;
+        }
+        .related-card:hover { border-color: var(--teal); }
+        .related-card h4 { color: var(--teal-light); font-size: 0.95rem; margin-bottom: 0.4rem; }
+        .related-card p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; }
         footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-secondary); font-size: 0.85rem; }
         footer a { color: var(--text-secondary); text-decoration: none; margin: 0 1rem; }
         footer a:hover { color: var(--text-primary); }
@@ -209,6 +231,19 @@
         <h3>Never Miss a Mile</h3>
         <p>GigLedger uses automatic GPS tracking to log every delivery mile. It detects stops, splits multi-delivery trips, maps your routes, and calculates your IRS deduction in real time. No manual entry needed.</p>
         <a href="/">Learn More About GigLedger</a>
+    </div>
+    <div class="related-articles">
+        <h3>Related Guides</h3>
+        <div class="related-grid">
+            <a href="/blog-doordash-tax-deductions.html" class="related-card">
+                <h4>DoorDash Tax Deductions 2026: Complete Guide</h4>
+                <p>Every deduction DoorDash drivers can claim — mileage, phone bills, car expenses, and more.</p>
+            </a>
+            <a href="/blog-self-employment-tax-guide.html" class="related-card">
+                <h4>Self-Employment Tax for Gig Workers: 1099 Guide</h4>
+                <p>How the 15.3% SE tax works, quarterly payment deadlines, and strategies to reduce what you owe.</p>
+            </a>
+        </div>
     </div>
 </article>
 
