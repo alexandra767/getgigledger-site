@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GigLedger - Gig Worker Tax Tracker for DoorDash, Uber & Instacart | iOS App</title>
-    <meta name="description" content="GigLedger is the iOS app for gig workers to track earnings, GPS mileage, expenses, and tax deductions. Built for DoorDash, Uber, Instacart, Lyft, and Grubhub drivers. 7-day free trial, then $4.99/mo. Schedule C preview, quarterly reminders, and 100% private local storage.">
+    <title>GigLedger - Gig Worker Tax Tracker for DoorDash, Uber & Instacart | iOS & Android</title>
+    <meta name="description" content="GigLedger is the app for gig workers to track earnings, GPS mileage, expenses, and tax deductions. Available on iOS, Android coming soon. Built for DoorDash, Uber, Instacart, Lyft, and Grubhub drivers. 7-day free trial, then $4.99/mo. Schedule C preview, quarterly reminders, and 100% private local storage.">
     <meta name="keywords" content="gig worker tax app, DoorDash tax tracker, Uber mileage tracker, gig economy tax deductions, self-employment tax calculator, Schedule C app, mileage tracker app, 1099 tax app, delivery driver expenses, quarterly tax reminders, gig income tracker, freelancer tax app 2026">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="Yhk9MZICaZrwzolSXDN7UlumwmgoUrOlPcOBJv0D-eQ" />
@@ -30,7 +30,7 @@
         "@context": "https://schema.org",
         "@type": "MobileApplication",
         "name": "GigLedger - Gig Worker Tax Tracker",
-        "operatingSystem": "iOS",
+        "operatingSystem": "iOS, Android",
         "applicationCategory": "FinanceApplication",
         "offers": {
             "@type": "Offer",
@@ -84,7 +84,7 @@
                 "name": "Is my financial data safe?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "GigLedger stores all data locally on your device. Nothing is sent to external servers. Optional iCloud sync uses your personal Apple iCloud account. There is no tracking, no ads, and no third-party data sharing."
+                    "text": "All data is stored locally on your device. On iOS, data uses Apple's SwiftData with optional iCloud sync. On Android, data is stored using Room (SQLite). Nothing is sent to external servers. There is no tracking, no ads, and no third-party data sharing."
                 }
             },
             {
@@ -125,6 +125,14 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Yes. Just screenshot your DoorDash earnings summary screen and import it into GigLedger. The built-in OCR automatically extracts your base pay, tips, number of deliveries, and active time. You can import multiple screenshots per day and merge them into one daily entry."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is GigLedger available on Android?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Android version of GigLedger is coming soon! It will include all the same features as the iOS version including earnings tracking, GPS mileage, receipt scanning, tax calculations, widgets, and more. Sign up for our waitlist to be notified when it launches on Google Play."
                 }
             }
         ]
@@ -909,6 +917,10 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                     Launching Soon on iOS
                 </a>
+                <a href="#download" class="btn-secondary" style="border-color: #3ddc84; color: #3ddc84;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.226l1.392-2.092a.404.404 0 00-.14-.554.408.408 0 00-.559.137L16.8 1.837a7.027 7.027 0 00-4.8-1.754 7.027 7.027 0 00-4.8 1.754L5.784-.283a.408.408 0 00-.559-.137.404.404 0 00-.14.554l1.392 2.092C3.517 3.862 1.5 6.814 1.5 10.2h21c0-3.386-2.017-6.338-4.977-7.974zM7.5 7.8a.9.9 0 110-1.8.9.9 0 010 1.8zm9 0a.9.9 0 110-1.8.9.9 0 010 1.8zM1.5 11.4v7.8a1.2 1.2 0 002.4 0v-7.8H1.5zm2.4 0v9a1.8 1.8 0 001.8 1.8h1.2v2.4a1.2 1.2 0 002.4 0v-2.4h2.4v2.4a1.2 1.2 0 002.4 0v-2.4h1.2a1.8 1.8 0 001.8-1.8v-9H3.9zm16.2 0v7.8a1.2 1.2 0 002.4 0v-7.8h-2.4z"/></svg>
+                    Android Coming Soon
+                </a>
                 <a href="#features" class="btn-secondary">See Features</a>
             </div>
             <div class="hero-stats">
@@ -1198,7 +1210,7 @@
         </div>
         <div class="trust-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            iCloud sync via your personal Apple account
+            Secure cloud sync (iCloud on iOS, local backup on Android)
         </div>
         <div class="trust-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
@@ -1247,7 +1259,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </button>
                 <div class="faq-answer">
-                    <div class="faq-answer-inner">All data is stored locally on your device using Apple's SwiftData framework. Nothing is sent to external servers. Optional iCloud sync uses your personal Apple account. There is no tracking, no ads, and no third-party data sharing.</div>
+                    <div class="faq-answer-inner">All data is stored locally on your device. On iOS, data is stored using Apple's SwiftData framework with optional iCloud sync via your personal Apple account. On Android, data is stored using Room (SQLite). Nothing is sent to external servers. There is no tracking, no ads, and no third-party data sharing.</div>
                 </div>
             </div>
             <div class="faq-item">
@@ -1295,6 +1307,15 @@
                     <div class="faq-answer-inner">Yes. Just screenshot your DoorDash earnings summary screen and import it into GigLedger. The built-in OCR automatically extracts your base pay, tips, number of deliveries, and active time. You can import multiple screenshots per day and merge them into one daily entry.</div>
                 </div>
             </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Is GigLedger available on Android?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">The Android version of GigLedger is coming soon! It will include all the same features as the iOS version -- earnings tracking, GPS mileage, receipt scanning, tax calculations, widgets, and more. Sign up for our waitlist to be notified the moment it launches on Google Play.</div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -1334,7 +1355,7 @@
 <!-- CTA -->
 <section class="cta-section" id="download">
     <h2>Ready to keep more<br>of what you earn?</h2>
-    <p>GigLedger is launching soon on the App Store. Be the first to know when it drops -- sign up and we'll notify you on launch day.</p>
+    <p>GigLedger is launching soon on the App Store, with Android coming shortly after. Be the first to know when it drops -- sign up and we'll notify you on launch day.</p>
     <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="waitlist-form" id="waitlist-form">
         <input type="hidden" name="form-name" value="waitlist">
         <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
@@ -1342,8 +1363,8 @@
         <button type="submit">Notify Me</button>
     </form>
     <div class="waitlist-success" id="waitlist-success">You're on the list! We'll email you on launch day.</div>
-    <p class="waitlist-privacy">No spam, ever. Just one email when GigLedger hits the App Store.</p>
-    <div class="coming-soon-note">Launching Spring 2026 -- Currently finishing Apple review</div>
+    <p class="waitlist-privacy">No spam, ever. Just one email when GigLedger launches.</p>
+    <div class="coming-soon-note">iOS launching Spring 2026 -- Android version coming soon</div>
 </section>
 
 <!-- Footer -->
