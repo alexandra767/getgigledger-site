@@ -684,6 +684,57 @@
         .why-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
         .why-icon { margin-bottom: 1rem; }
 
+        /* ── More Apps ── */
+        .app-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: inherit;
+        }
+        .app-card:hover {
+            border-color: rgba(13, 115, 119, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+        }
+        .app-card-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .app-card-icon svg { width: 30px; height: 30px; }
+        .app-card h3 { font-size: 1.1rem; font-weight: 700; }
+        .app-card-tagline {
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-top: -0.25rem;
+        }
+        .app-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+        .app-store-link {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--teal-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: auto;
+            padding-top: 0.5rem;
+        }
+        .app-store-link svg { width: 14px; height: 14px; }
+
         /* ── Trust Bar ── */
         .trust-bar {
             padding: 3rem 2rem;
@@ -1993,6 +2044,53 @@
                 </div>
                 <h3>1099 Self-Employment Tax Guide</h3>
                 <p>How the 15.3% SE tax works, quarterly payments, Schedule C explained, and real examples of how much gig workers actually owe.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- More Apps -->
+<section class="why-section">
+    <div class="section-inner" style="text-align: center;">
+        <div class="section-label">More Apps</div>
+        <h2 class="section-title">More from the Developer</h2>
+        <p class="section-subtitle" style="margin: 0.75rem auto 0;">Check out our other apps built with the same focus on privacy, quality, and real utility.</p>
+        <div class="why-grid">
+            <a href="https://apps.apple.com/us/app/echomind-journal/id6759583968" class="app-card fade-up" target="_blank" rel="noopener">
+                <div class="app-card-icon" style="background: linear-gradient(135deg, #7c3aed, #a78bfa);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                </div>
+                <h3>EchoMind Journal</h3>
+                <div class="app-card-tagline" style="color: #a78bfa;">Voice Journal &middot; Mood Tracker</div>
+                <p>Speak your thoughts, see your patterns. On-device voice journaling with mood insights, weekly charts, and Apple Watch support.</p>
+                <span class="app-store-link">
+                    View on App Store
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                </span>
+            </a>
+            <a href="https://apps.apple.com/us/app/contractlens/id6759786784" class="app-card fade-up" target="_blank" rel="noopener">
+                <div class="app-card-icon" style="background: linear-gradient(135deg, #1e3a5f, #3b82f6);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                </div>
+                <h3>ContractLens</h3>
+                <div class="app-card-tagline" style="color: #3b82f6;">AI Contract Analyzer</div>
+                <p>Scan or import any contract and get instant risk scoring, clause-by-clause analysis, and plain-English explanations. 100% on-device.</p>
+                <span class="app-store-link">
+                    View on App Store
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                </span>
+            </a>
+            <a href="https://apps.apple.com/us/app/travel-planner-wanderlink/id6747599042" class="app-card fade-up" target="_blank" rel="noopener">
+                <div class="app-card-icon" style="background: linear-gradient(135deg, #0D7377, #14b8a6);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                </div>
+                <h3>WanderLink</h3>
+                <div class="app-card-tagline" style="color: var(--teal-light);">Smart Travel Planner</div>
+                <p>AI-powered trip planning with group chat, budget tracking, event booking, currency converter, and Apple Watch companion.</p>
+                <span class="app-store-link">
+                    View on App Store
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                </span>
             </a>
         </div>
     </div>
