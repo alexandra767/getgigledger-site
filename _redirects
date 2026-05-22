@@ -3,3 +3,10 @@
 /doordash-tax-deductions    /blog-doordash-tax-deductions.html    200
 /mileage-tracking    /blog-mileage-tracking-gig-workers.html    200
 /self-employment-tax    /blog-self-employment-tax-guide.html    200
+
+# Claude skill landing pages — gigledger.org acts as a Reddit-safe redirector
+# (Reddit auto-blocks *.netlify.app subdomains; this hop sidesteps the filter)
+/kuiper                    https://thunderous-selkie-ffc6ad.netlify.app/                       302
+/kuiper/*                  https://thunderous-selkie-ffc6ad.netlify.app/:splat                 302
+/rejection-recovery        https://thunderous-selkie-ffc6ad.netlify.app/rejection-recovery/    302
+/rejection-recovery/*      https://thunderous-selkie-ffc6ad.netlify.app/rejection-recovery/:splat    302
