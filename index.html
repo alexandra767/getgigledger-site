@@ -332,7 +332,7 @@
         }
         .hero h1 em {
             font-style: normal;
-            background: linear-gradient(135deg, var(--teal-light), var(--amber));
+            background: linear-gradient(135deg, var(--teal-light), var(--green));
             -webkit-background-clip: text;
             background-clip: text;
         }
@@ -588,20 +588,25 @@
         }
         .gallery-track:hover { animation-play-state: paused; }
         .gallery-item {
-            width: 220px;
+            width: 236px;
             flex-shrink: 0;
-            border-radius: 28px;
+            border-radius: 34px;
             overflow: hidden;
-            border: 3px solid #2a2a3a;
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+            padding: 8px;
+            background: #15151f;
+            box-shadow:
+                0 24px 48px -12px rgba(0, 0, 0, 0.5),
+                inset 0 0 0 1.5px rgba(255, 255, 255, 0.08);
             transition: transform 0.3s;
-            background: #000;
         }
-        .gallery-item:hover { transform: scale(1.03); }
-        .gallery-item img { width: 100%; display: block; }
+        .gallery-item:hover { transform: translateY(-6px); }
+        .gallery-item img { width: 100%; display: block; border-radius: 26px; }
         @keyframes scroll-gallery {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .gallery-track { animation: none; overflow-x: auto; width: auto; }
         }
 
         /* ── CTA ── */
@@ -1426,7 +1431,7 @@
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
                     Download on App Store
                 </a>
-                <a href="https://play.google.com/store/apps/details?id=com.gigledger.android" class="btn-secondary" target="_blank" rel="noopener" style="border-color: #3ddc84; color: #3ddc84;">
+                <a href="https://play.google.com/store/apps/details?id=com.gigledger.android" class="btn-secondary" target="_blank" rel="noopener">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.226l1.392-2.092a.404.404 0 00-.14-.554.408.408 0 00-.559.137L16.8 1.837a7.027 7.027 0 00-4.8-1.754 7.027 7.027 0 00-4.8 1.754L5.784-.283a.408.408 0 00-.559-.137.404.404 0 00-.14.554l1.392 2.092C3.517 3.862 1.5 6.814 1.5 10.2h21c0-3.386-2.017-6.338-4.977-7.974zM7.5 7.8a.9.9 0 110-1.8.9.9 0 010 1.8zm9 0a.9.9 0 110-1.8.9.9 0 010 1.8zM1.5 11.4v7.8a1.2 1.2 0 002.4 0v-7.8H1.5zm2.4 0v9a1.8 1.8 0 001.8 1.8h1.2v2.4a1.2 1.2 0 002.4 0v-2.4h2.4v2.4a1.2 1.2 0 002.4 0v-2.4h1.2a1.8 1.8 0 001.8-1.8v-9H3.9zm16.2 0v7.8a1.2 1.2 0 002.4 0v-7.8h-2.4z"/></svg>
                     Get it on Google Play
                 </a>
