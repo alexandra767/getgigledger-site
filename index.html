@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GigLedger - Gig Worker Tax Tracker for DoorDash, Uber & Instacart | iOS & Android</title>
-    <meta name="description" content="GigLedger is the all-in-one app for gig workers to track earnings, GPS mileage, expenses, and tax deductions. Free to download on the App Store and Google Play. Built for DoorDash, Uber, Instacart, Lyft, and Grubhub drivers. Schedule C preview, quarterly reminders, and 100% private local storage.">
+    <meta name="description" content="GigLedger is the all-in-one app for gig workers to track earnings, GPS mileage, expenses, and tax deductions. 7-day free trial on the App Store and Google Play. Built for DoorDash, Uber, Instacart, Lyft, and Grubhub drivers. Schedule C preview, quarterly reminders, and 100% private local storage.">
     <meta name="keywords" content="gig worker tax app, DoorDash tax tracker, Uber mileage tracker, gig economy tax deductions, self-employment tax calculator, Schedule C app, mileage tracker app, 1099 tax app, delivery driver expenses, quarterly tax reminders, gig income tracker, freelancer tax app 2026">
     <meta name="robots" content="index, follow">
     <meta name="google-site-verification" content="Yhk9MZICaZrwzolSXDN7UlumwmgoUrOlPcOBJv0D-eQ" />
@@ -87,7 +87,7 @@
                 "name": "How does mileage tracking work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "GigLedger offers automatic GPS trip detection that records your route, distance, and calculates your IRS standard mileage deduction ($0.725/mile for 2026). It detects delivery stops and splits multi-stop trips automatically. You can also log trips manually."
+                    "text": "GigLedger offers automatic GPS trip detection that records your route, distance, and calculates your IRS standard mileage deduction at the rate in force on each trip's date. The IRS raised the 2026 rate mid-year (Announcement 2026-11): $0.725/mile for January 1 to June 30 and $0.76/mile from July 1 onward. GigLedger applies the correct rate to every trip automatically. It also detects delivery stops and splits multi-stop trips, and you can log trips manually."
                 }
             },
             {
@@ -1439,8 +1439,8 @@
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="hero-stat-value">$0.725</div>
-                    <div class="hero-stat-label">Per Mile Deduction (2026)</div>
+                    <div class="hero-stat-value">$0.76</div>
+                    <div class="hero-stat-label">Per Mile Deduction (Jul&ndash;Dec 2026)</div>
                 </div>
                 <div class="hero-stat">
                     <div class="hero-stat-value">15.3%</div>
@@ -1511,8 +1511,8 @@
                 <div class="proof-stat-label">Average annual deductions found by tracking mileage and expenses</div>
             </div>
             <div class="proof-stat-card fade-up">
-                <div class="proof-stat-value" style="color: var(--amber);">$0.725</div>
-                <div class="proof-stat-label">Per mile IRS deduction rate for 2026 -- every mile counts</div>
+                <div class="proof-stat-value" style="color: var(--amber);">$0.76</div>
+                <div class="proof-stat-label">Per mile IRS rate since July 1, 2026 (up from $0.725) -- GigLedger applies the right rate to every trip</div>
             </div>
             <div class="proof-stat-card fade-up">
                 <div class="proof-stat-value" style="color: var(--green);">5 min</div>
@@ -1583,7 +1583,7 @@
                     <span style="color: var(--green);">&#9741;</span>
                 </div>
                 <h3>Auto Mileage Tracking</h3>
-                <p>Automatic GPS trip detection with jitter filtering and signal-loss recovery. Tracks routes, calculates deductions at the 2026 IRS rate ($0.725/mi), and auto-splits commute from delivery miles.</p>
+                <p>Automatic GPS trip detection with jitter filtering and signal-loss recovery. Tracks routes, calculates deductions at the IRS rate in force on each trip's date ($0.725/mi Jan&ndash;Jun, $0.76/mi Jul&ndash;Dec 2026), and auto-splits commute from delivery miles.</p>
             </div>
             <div class="feature-card fade-up">
                 <div class="feature-icon" style="background: rgba(245, 158, 11, 0.12);">
@@ -1715,7 +1715,7 @@
                 <li>GPS accuracy indicator and jitter filtering</li>
                 <li>Auto-splits commute from delivery miles</li>
                 <li>Survives app kills, tunnels, and signal loss</li>
-                <li>IRS standard mileage rate ($0.725/mi for 2026)</li>
+                <li>2026 IRS rates applied by trip date ($0.725/mi Jan&ndash;Jun &middot; $0.76/mi Jul&ndash;Dec)</li>
             </ul>
         </div>
         <div class="showcase-phones">
@@ -1754,7 +1754,7 @@
                 <img src="images/dashboard-new.png" alt="GigLedger dashboard showing daily earnings total, net profit after expenses, mileage deduction summary, and estimated tax liability at a glance">
             </div>
             <div class="screenshot-frame fade-up">
-                <img src="images/mileage-new.png" alt="GigLedger automatic GPS mileage tracking screen with route map, trip distance, and IRS standard deduction calculation at $0.725 per mile">
+                <img src="images/mileage-new.png" alt="GigLedger automatic GPS mileage tracking screen with route map, trip distance, and IRS standard deduction calculated at the current rate ($0.76 per mile since July 2026)">
             </div>
             <div class="screenshot-frame fade-up">
                 <img src="images/tax-center-new.png" alt="GigLedger tax center displaying self-employment tax, federal income tax, state tax, local EIT estimates, and quarterly payment tracker">
@@ -2005,7 +2005,7 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </button>
                 <div class="faq-answer">
-                    <div class="faq-answer-inner">GigLedger offers GPS-based automatic trip tracking that records your route, distance, and calculates your IRS standard mileage deduction ($0.725/mile for 2026). It uses GPS jitter filtering to eliminate phantom distance from parking lots, signal-loss recovery to keep tracking through tunnels and garages, and automatically splits commute miles from delivery miles. It detects delivery stops, splits multi-stop trips, works in the background, and survives app kills. You can also log trips manually.</div>
+                    <div class="faq-answer-inner">GigLedger offers GPS-based automatic trip tracking that records your route, distance, and calculates your IRS standard mileage deduction at the rate in force on each trip's date. The IRS raised the 2026 rate mid-year (Announcement 2026-11): <strong>$0.725/mile from January 1 to June 30</strong> and <strong>$0.76/mile from July 1 onward</strong> &mdash; GigLedger applies the correct rate to every trip automatically, so your Schedule C stays accurate through the change. It uses GPS jitter filtering to eliminate phantom distance from parking lots, signal-loss recovery to keep tracking through tunnels and garages, and automatically splits commute miles from delivery miles. It detects delivery stops, splits multi-stop trips, works in the background, and survives app kills. You can also log trips manually.</div>
                 </div>
             </div>
             <div class="faq-item">
@@ -2094,7 +2094,7 @@
                     <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <h3>How to Track Mileage (IRS-Compliant)</h3>
-                <p>What miles count, IRS log requirements, standard vs. actual expenses, and how GPS auto-tracking works. Save $270 per 1,000 miles.</p>
+                <p>What miles count, IRS log requirements, standard vs. actual expenses, and how GPS auto-tracking works. Save roughly $280 per 1,000 miles.</p>
             </a>
             <a href="/blog-self-employment-tax-guide.html" class="why-card fade-up" style="text-decoration: none; color: inherit;">
                 <div class="why-icon">
@@ -2200,13 +2200,13 @@
             Download on App Store
         </a>
     </div>
-    <p class="waitlist-privacy" style="margin-top: 1rem;">Free to download -- iPhone, iPad, and Apple Watch</p>
+    <p class="waitlist-privacy" style="margin-top: 1rem;">Free 7-day trial -- iPhone, iPad, and Apple Watch</p>
 
     <!-- Android (live on Google Play) -->
     <div id="android-beta" style="margin-top: 3.5rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.12); max-width: 560px; margin-left: auto; margin-right: auto;">
         <div style="display: inline-block; background: rgba(61, 220, 132, 0.15); color: #3ddc84; padding: 0.4rem 0.9rem; border-radius: 999px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: 0.04em;">ANDROID — NOW LIVE ON GOOGLE PLAY</div>
         <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Get GigLedger for Android</h3>
-        <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Same features as iOS — earnings tracking, GPS mileage, receipt scanning, tax estimates, Schedule C preview. Free to download.</p>
+        <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">Same features as iOS — earnings tracking, GPS mileage, receipt scanning, tax estimates, Schedule C preview. Free 7-day trial.</p>
         <div style="display: flex; flex-direction: column; gap: 0.75rem; max-width: 380px; margin: 0 auto;">
             <a href="https://play.google.com/store/apps/details?id=com.gigledger.android" target="_blank" rel="noopener" class="btn-primary" style="background: #3ddc84; color: #0a0e1a; justify-content: center; font-weight: 700;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;"><path d="M17.523 2.226l1.392-2.092a.404.404 0 00-.14-.554.408.408 0 00-.559.137L16.8 1.837a7.027 7.027 0 00-4.8-1.754 7.027 7.027 0 00-4.8 1.754L5.784-.283a.408.408 0 00-.559-.137.404.404 0 00-.14.554l1.392 2.092C3.517 3.862 1.5 6.814 1.5 10.2h21c0-3.386-2.017-6.338-4.977-7.974zM7.5 7.8a.9.9 0 110-1.8.9.9 0 010 1.8zm9 0a.9.9 0 110-1.8.9.9 0 010 1.8zM1.5 11.4v7.8a1.2 1.2 0 002.4 0v-7.8H1.5zm2.4 0v9a1.8 1.8 0 001.8 1.8h1.2v2.4a1.2 1.2 0 002.4 0v-2.4h2.4v2.4a1.2 1.2 0 002.4 0v-2.4h1.2a1.8 1.8 0 001.8-1.8v-9H3.9zm16.2 0v7.8a1.2 1.2 0 002.4 0v-7.8h-2.4z"/></svg>
