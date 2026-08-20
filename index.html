@@ -156,6 +156,14 @@
             },
             {
                 "@type": "Question",
+                "name": "Can I switch to GigLedger from MileIQ, Everlance, or Stride without losing my miles?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Export your trips from MileIQ, Everlance, or Stride as a CSV (or use any spreadsheet with a date column and a miles column) and import it from the Dashboard or the Mileage tab. GigLedger previews every trip before saving, values each one at the IRS mileage rate in force on its own date, keeps personal trips out of your deduction, and skips any trip that is already in the app so nothing is counted twice. If you import the wrong file, Undo removes exactly what that import added."
+                }
+            },
+            {
+                "@type": "Question",
                 "name": "Is GigLedger available on Android?",
                 "acceptedAnswer": {
                     "@type": "Answer",
@@ -1631,6 +1639,13 @@
 
         <div class="features-grid">
             <div class="feature-card fade-up">
+                <div class="feature-icon" style="background: rgba(16, 185, 129, 0.12); color: var(--green);">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </div>
+                <h3>New: Bring Your Miles With You</h3>
+                <p>Switching from MileIQ, Everlance, Stride, or a spreadsheet? Import your existing log in about a minute. Every trip is previewed first, valued at the IRS rate for its own date, personal trips stay out of your deduction, and anything already in GigLedger is skipped &mdash; so nothing counts twice. <a href="/blog-switch-from-mileiq-stride-everlance.html" style="color: var(--teal-light);">How to export from each app &rarr;</a></p>
+            </div>
+            <div class="feature-card fade-up">
                 <div class="feature-icon" style="background: rgba(13, 115, 119, 0.12); color: var(--teal-light);">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
                 </div>
@@ -1692,6 +1707,7 @@
             <h3>Also in the box</h3>
             <ul>
                 <li>Receipt &amp; 1099 scanner</li>
+                <li>Import your mileage log from MileIQ, Everlance, Stride, Solo, or any CSV &mdash; with one-tap undo</li>
                 <li>Merge same-day entries</li>
                 <li>Daily earnings goals</li>
                 <li>Quarterly payment reminders</li>
@@ -2079,6 +2095,15 @@
             </div>
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
+                    Can I switch from MileIQ, Everlance, or Stride without losing my miles?
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">Yes. Export your trips from your current app as a CSV &mdash; or use any spreadsheet with a date column and a miles column &mdash; and import it from the Dashboard or the Mileage tab. GigLedger previews every trip before saving, values each one at the IRS rate for its own date (2026 has two), keeps personal trips out of your deduction, and skips anything already in the app so nothing counts twice. Picked the wrong file? <strong>Undo</strong> removes exactly what that import added. <a href="/blog-switch-from-mileiq-stride-everlance.html" style="color: #4ecdc4;">Step-by-step export instructions for each app &rarr;</a></div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
                     Is GigLedger available on Android?
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </button>
@@ -2105,6 +2130,13 @@
             <span class="guide-featured-arrow">Read the checklist &rarr;</span>
         </a>
         <div class="why-grid">
+            <a href="/blog-switch-from-mileiq-stride-everlance.html" class="why-card fade-up" style="text-decoration: none; color: inherit;">
+                <div class="why-icon">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </div>
+                <h3>Switching From MileIQ, Stride, or Everlance</h3>
+                <p>How to export your log from each app, what to check before you import, and why a mid-year switch doesn&rsquo;t have to cost you a single deductible mile.</p>
+            </a>
             <a href="/blog-2026-mileage-rate-increase.html" class="why-card fade-up" style="text-decoration: none; color: inherit;">
                 <div class="why-icon">
                     <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--teal-light)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
@@ -2289,6 +2321,7 @@
                 <h4>Tax Guides</h4>
                 <ul>
                     <li><a href="/blog-q3-estimated-taxes-2026.html">Q3 Estimated Taxes</a></li>
+                    <li><a href="/blog-switch-from-mileiq-stride-everlance.html">Switch From MileIQ / Stride</a></li>
                     <li><a href="/blog-doordash-tax-deductions.html">DoorDash Deductions</a></li>
                     <li><a href="/blog-mileage-tracking-gig-workers.html">Mileage Tracking</a></li>
                     <li><a href="/blog-self-employment-tax-guide.html">Self-Employment Tax</a></li>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switching From MileIQ, Stride, or Everlance Without Losing a Mile | GigLedger</title>
+    <meta name="description" content="How to export your mileage log from MileIQ, Everlance, or Stride and import it into GigLedger — so a mid-year switch keeps every deductible mile, at the right IRS rate, with nothing counted twice.">
+    <meta name="keywords" content="switch from MileIQ, MileIQ alternative, Stride alternative, Everlance alternative, export MileIQ CSV, export Everlance trips, Stride mileage report CSV, import mileage log, mileage tracker for gig workers">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gigledger.org/blog-switch-from-mileiq-stride-everlance.html">
+
+    <!-- Favicons & App Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0a0e1a">
+
+    <meta property="og:title" content="Switching From MileIQ, Stride, or Everlance Without Losing a Mile">
+    <meta property="og:description" content="Export from MileIQ, Everlance, or Stride, import into GigLedger, keep every deductible mile at the right IRS rate. Nothing counted twice.">
+    <meta property="og:image" content="https://gigledger.org/images/og-banner.png">
+    <meta property="og:url" content="https://gigledger.org/blog-switch-from-mileiq-stride-everlance.html">
+    <meta property="og:type" content="article">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Switching From MileIQ, Stride, or Everlance Without Losing a Mile">
+    <meta name="twitter:description" content="Switch mileage apps mid-year without losing a deductible mile.">
+    <meta name="twitter:image" content="https://gigledger.org/images/og-banner.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Switching From MileIQ, Stride, or Everlance Without Losing a Mile",
+        "description": "How to export your mileage log from MileIQ, Everlance, or Stride and import it into GigLedger — so a mid-year switch keeps every deductible mile, at the right IRS rate, with nothing counted twice.",
+        "author": {
+            "@type": "Organization",
+            "name": "GigLedger"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "GigLedger",
+            "url": "https://gigledger.org"
+        },
+        "datePublished": "2026-08-20",
+        "dateModified": "2026-08-20",
+        "mainEntityOfPage": "https://gigledger.org/blog-switch-from-mileiq-stride-everlance.html"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gigledger.org/" },
+            { "@type": "ListItem", "position": 2, "name": "Switching From MileIQ, Stride, or Everlance", "item": "https://gigledger.org/blog-switch-from-mileiq-stride-everlance.html" }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can I import my MileIQ, Everlance, or Stride mileage into GigLedger?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Export your trips as a CSV from MileIQ (Reports), Everlance (Trips → Export), or Stride (Taxes tab → tax report, emailed as CSV), then choose the file from GigLedger's Import screen. Any spreadsheet with a date column and a miles column works too. Every trip is previewed before it is saved."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will importing double-count trips I already logged in GigLedger?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Any trip already in GigLedger on the same day with the same miles is flagged as already imported and skipped, so importing the same file twice adds nothing. If you import the wrong file, Undo removes exactly the trips that import added."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens to personal trips and the 2026 mid-year rate change when I import?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Trips your old app marked Personal, Commute, Medical, or Charity are kept for a complete log but never deducted. Every business trip is valued at the IRS rate in force on its own date — 72.5 cents per mile through June 30, 2026 and 76 cents from July 1 — rather than one flat rate for the year."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-deep: #0a0e1a; --bg-card: #111827; --teal: #0D7377; --teal-light: #14b8a6;
+            --amber: #F59E0B; --green: #10B981; --red: #EF4444; --text-primary: #f0f2f5;
+            --text-secondary: #94a3b8; --border: rgba(255, 255, 255, 0.06);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg-deep); color: var(--text-primary); line-height: 1.8; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; background: rgba(10, 14, 26, 0.95); backdrop-filter: saturate(180%) blur(20px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 800px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+        .nav-logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--teal), var(--teal-light)); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .nav-logo-icon svg { width: 20px; height: 20px; fill: white; }
+        .nav-logo span { font-weight: 700; font-size: 1.25rem; color: var(--text-primary); }
+        .nav-links { display: flex; align-items: center; gap: 2rem; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .nav-links a:hover { color: var(--text-primary); }
+        .article { max-width: 800px; margin: 0 auto; padding: 8rem 2rem 4rem; }
+        .article-breadcrumb { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 2rem; }
+        .article-breadcrumb a { color: var(--teal-light); text-decoration: none; }
+        .article-breadcrumb a:hover { text-decoration: underline; }
+        .article h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+        .article-meta { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        .article h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--teal-light); }
+        .article h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; }
+        .article p { color: var(--text-secondary); margin-bottom: 1.25rem; }
+        .article ul, .article ol { color: var(--text-secondary); margin: 1rem 0 1.5rem 1.5rem; }
+        .article li { margin-bottom: 0.5rem; }
+        .article strong { color: var(--text-primary); }
+        .highlight-box { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--teal-light); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+        .highlight-box p { margin-bottom: 0; }
+        .warning-box { background: var(--bg-card); border: 1px solid var(--border); border-left: 4px solid var(--amber); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+        .warning-box p { margin-bottom: 0; }
+        .cta-box { background: linear-gradient(135deg, rgba(13, 115, 119, 0.15), rgba(20, 184, 166, 0.08)); border: 1px solid rgba(13, 115, 119, 0.3); border-radius: 16px; padding: 2rem; margin: 2.5rem 0; text-align: center; }
+        .cta-box h3 { color: var(--text-primary); margin-bottom: 0.75rem; }
+        .cta-box p { margin-bottom: 1rem; }
+        .cta-box a { display: inline-block; background: linear-gradient(135deg, var(--teal), var(--teal-light)); color: white; padding: 12px 24px; border-radius: 10px; text-decoration: none; font-weight: 600; }
+        .rate-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        .rate-table th, .rate-table td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+        .rate-table th { color: var(--teal-light); font-weight: 600; font-size: 0.9rem; }
+        .rate-table td { color: var(--text-secondary); font-size: 0.9rem; }
+        .related-articles { margin: 3rem 0 1rem; }
+        .related-articles h3 { color: var(--text-primary); margin-bottom: 1rem; font-size: 1.2rem; }
+        .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr; } }
+        .related-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; text-decoration: none; transition: border-color 0.2s; }
+        .related-card:hover { border-color: var(--teal); }
+        .related-card h4 { color: var(--teal-light); font-size: 0.95rem; margin-bottom: 0.4rem; }
+        .related-card p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; }
+        footer { border-top: 1px solid var(--border); padding: 2rem; text-align: center; color: var(--text-secondary); font-size: 0.85rem; }
+        footer a { color: var(--text-secondary); text-decoration: none; margin: 0 1rem; }
+        footer a:hover { color: var(--text-primary); }
+        @media (max-width: 768px) { .article h1 { font-size: 1.75rem; } .article { padding: 6rem 1.25rem 3rem; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <div class="nav-logo-icon"><svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg></div>
+            <span>GigLedger</span>
+        </a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#features">Features</a>
+            <a href="/#faq">FAQ</a>
+        </div>
+    </div>
+</nav>
+
+<article class="article">
+    <div class="article-breadcrumb">
+        <a href="/">GigLedger</a> &raquo; Switching From MileIQ, Stride, or Everlance
+    </div>
+
+    <h1>Switching From MileIQ, Stride, or Everlance Without Losing a Mile</h1>
+    <div class="article-meta">Published August 2026 &middot; 5 min read</div>
+
+    <p>Here is the quiet problem with changing mileage apps in the middle of a tax year: the new app has no history. Every deductible mile you logged since January lives in the old app, and unless it comes with you, you are either keeping two logs or rebuilding one from memory &mdash; which the IRS does not accept. So most drivers don't switch. They stay with whatever they started the year on, even when it stopped working for them months ago.</p>
+
+    <p>GigLedger can now import your existing log. Export from your current app, pick the file, and every trip shows up in a preview before anything is saved. The whole thing takes about a minute. This guide covers how to get the export out of each app, what to check before you tap import, and what happens to your miles once they land.</p>
+
+    <h2>What the import does with your trips</h2>
+
+    <p>A mileage log is only worth anything if it is <em>right</em>, so the importer is deliberately careful:</p>
+
+    <ul>
+        <li><strong>You see every trip first.</strong> Date, miles, where it went, which platform, and what it's worth. Nothing is written until you tap <em>Add</em>.</li>
+        <li><strong>Each trip is valued at the IRS rate for its own date.</strong> 2026 has two rates &mdash; 72.5&cent; through June 30 and 76&cent; from July 1 &mdash; and a surprising number of apps apply one flat rate to the whole year. GigLedger doesn't.</li>
+        <li><strong>Personal trips stay out of your deduction.</strong> Anything your old app marked Personal, Commute, Medical, or Charity is kept for a complete log but never deducted. They're deselected by default; you can include them if you want the full history.</li>
+        <li><strong>Nothing counts twice.</strong> Any trip that's already in GigLedger &mdash; same day, same miles &mdash; is flagged <em>Already imported</em> and skipped. Import the same file twice and the second time adds nothing.</li>
+        <li><strong>Undo is one tap.</strong> Wrong file, wrong year? <em>Undo this import</em> removes exactly the trips that import added and nothing else.</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>Where to find it:</strong> on a new account, the Dashboard's welcome card says <em>Already tracking somewhere else?</em> On an existing account, use <strong>Quick Actions &rarr; Import Data</strong>, or the <strong>Mileage tab &rarr; &middot;&middot;&middot; menu</strong>.
+    </div>
+
+    <h2>Exporting from MileIQ</h2>
+
+    <p>MileIQ's reports come out as a CSV with columns like <code>START_DATE</code>, <code>END_DATE</code>, <code>CATEGORY</code>, <code>START</code>, <code>STOP</code>, and <code>MILES</code> &mdash; some of them with a literal asterisk in the header. That's fine; GigLedger reads it as-is.</p>
+
+    <ol>
+        <li>Sign in at the MileIQ web dashboard (it's easier than the phone for this).</li>
+        <li>Open <strong>Reports</strong> and pick the date range &mdash; <em>January 1 to today</em> for a full-year move.</li>
+        <li>Choose <strong>CSV</strong> as the format and export. Save the file somewhere your phone can reach it: iCloud Drive, or email it to yourself.</li>
+    </ol>
+
+    <p>MileIQ's <code>CATEGORY</code> column (Business / Personal) is honored, and if you used the <code>PURPOSE</code> field to note which platform a trip was for &mdash; &ldquo;DoorDash&rdquo;, &ldquo;Uber&rdquo; &mdash; GigLedger picks that up as the platform tag.</p>
+
+    <h2>Exporting from Everlance</h2>
+
+    <p>Everlance's trip export is a CSV whose header starts <code>Deduction, Miles, From, To, Date, Purpose, Income Source&hellip;</code> Business trips are marked <em>Work</em>, and there's an <em>Income Source</em> column for the platform.</p>
+
+    <ol>
+        <li>Sign in on the Everlance web dashboard.</li>
+        <li>Go to <strong>Trips</strong> and use <strong>Export</strong> (on some plans it's under <em>Reports &rarr; Data Export</em>). Choose a date range and CSV.</li>
+        <li>Everlance emails the file or downloads it directly. Get it onto your phone the same way &mdash; iCloud Drive or email.</li>
+    </ol>
+
+    <p>GigLedger prefers Everlance's <em>full address</em> columns over the short place names when both are present, maps <em>Uber Eats</em>, <em>DoorDash</em>, <em>Instacart</em> and the rest onto its own platform list, and treats <em>Work</em> as business.</p>
+
+    <h2>Exporting from Stride</h2>
+
+    <p>Stride doesn't publish a column spec, and its exports are known to contain values like <code>12.3 mi</code> and <code>$9.35</code> with the unit and dollar sign baked in. GigLedger strips those automatically.</p>
+
+    <ol>
+        <li>In the Stride app, open the <strong>Taxes</strong> tab.</li>
+        <li>Tap your <strong>tax report</strong> for the year. Stride emails you separate CSVs for mileage, expenses, and income.</li>
+        <li>Use the <strong>mileage</strong> CSV. Its job category (&ldquo;Delivery&rdquo;, &ldquo;Rideshare&rdquo;) is read as a business trip.</li>
+    </ol>
+
+    <h2>Coming from a spreadsheet or Solo?</h2>
+
+    <p>Any spreadsheet works if it has a <strong>date column</strong> and a <strong>miles column</strong>. Start- and end-odometer columns work too &mdash; GigLedger subtracts them. A <em>Purpose</em> or <em>Category</em> column is used if it's there, and a totals row at the bottom is ignored. Save it as CSV from Excel, Numbers, or Google Sheets.</p>
+
+    <p>Solo users: GigLedger has a separate <strong>Solo trips PDF</strong> import that brings earnings and miles over together. It's in the same Import menu.</p>
+
+    <h2>Three things to check before you tap Add</h2>
+
+    <div class="warning-box">
+        <strong>1. The date range.</strong> Export from January 1 if you want the whole year. If you already logged some of the year in GigLedger, that's fine &mdash; the overlap is detected and skipped.<br><br>
+        <strong>2. Business vs. personal.</strong> Glance at the preview. If your old app lumped everything together as business, uncheck the trips that weren't. It's easier now than at tax time.<br><br>
+        <strong>3. The July 1 line.</strong> Look at the deduction column in the preview: trips before July 1 should show the lower rate, trips after it the higher one. If they all look the same, the dates didn't come through &mdash; GigLedger will tell you which rows it couldn't read.
+    </div>
+
+    <h2>What if the file is rejected?</h2>
+
+    <p>The importer tells you exactly what's missing. <em>No date column found</em> means the file has no per-trip dates &mdash; a summary export rather than a trip log; go back and export the detailed version. <em>No miles column found</em> usually means you picked an <strong>earnings</strong> export by mistake; those go in through <em>Import Earnings</em> instead. If a few rows are skipped, the preview says how many and why.</p>
+
+    <h2>Why this matters more than it sounds</h2>
+
+    <p>At 2026 rates, every 1,000 business miles is roughly <strong>$725&ndash;$760 off your taxable profit</strong>. A driver who switches apps in August and leaves seven months of miles behind doesn't lose a feature &mdash; they lose real money, or they spend a weekend in a spreadsheet rebuilding a log the IRS may not accept anyway. Bringing the log with you is the difference between switching and starting over.</p>
+
+    <div class="cta-box">
+        <h3>Bring your miles with you.</h3>
+        <p>Import from MileIQ, Everlance, Stride, or any spreadsheet in about a minute. Automatic GPS tracking from there on, the right IRS rate on every trip, and a running tax estimate all year. Free 7-day trial, then $4.99/mo or $39.99/yr &mdash; on iPhone and Android.</p>
+        <a href="/">Get GigLedger</a>
+    </div>
+
+    <div class="related-articles">
+        <h3>Related Guides</h3>
+        <div class="related-grid">
+            <a href="/blog-2026-mileage-rate-increase.html" class="related-card">
+                <h4>IRS Raises the 2026 Mileage Rate to 76&cent; Mid-Year</h4>
+                <p>The split-rate year explained: what changed July 1 and how to keep your log audit-ready.</p>
+            </a>
+            <a href="/blog-mileage-tracking-gig-workers.html" class="related-card">
+                <h4>How to Track Mileage (IRS-Compliant)</h4>
+                <p>What miles count, what a valid log needs, and how GPS auto-tracking works.</p>
+            </a>
+        </div>
+    </div>
+</article>
+
+
+<footer>
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="/terms.html">Terms</a>
+    <a href="mailto:gigledger.help@gmail.com">Contact</a>
+    <br><br>
+    &copy; 2026 GigLedger. All rights reserved.
+</footer>
+
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "446fed36a48441a984bcf9f6a4b700b0"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
