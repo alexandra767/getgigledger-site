@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wren's Lantern: a dungeon game about keeping the light on</title>
-<meta name="description" content="Wren is a small knight with a big lantern. Dodge, burst and glow through five worlds of monsters and bosses. One price of $2.99, no ads, no in-app purchases, plays offline. Coming soon to iPhone, with Android to follow.">
+<meta name="description" content="Wren is a small knight with a big lantern. Dodge, burst and glow through eight worlds of monsters and bosses. One price of $2.99, no ads, no in-app purchases, plays offline. Out now on iPhone, with Android to follow.">
 <meta property="og:title" content="Wren's Lantern">
 <meta property="og:description" content="A small knight, a big lantern, and a very dark dungeon. Out now on iPhone, with Android to follow.">
 <meta property="og:image" content="https://gigledger.org/wrens-lantern/media/card.jpg">
@@ -91,7 +91,7 @@ h2{font:700 clamp(2.3rem,5vw,3.6rem)/1 var(--display);margin:0 0 1.1rem;color:#f
 .pair img,.inside img{border-radius:18px;box-shadow:0 0 0 2px #23285c}
 .pair img:last-child{margin-top:3rem}
 
-/* five worlds, in the order you meet them */
+/* the worlds, in the order you meet them */
 .worlds{background:linear-gradient(#0a0a1e,#0e0f30 30%,#0e0f30 70%,#0a0a1e)}
 .reel{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(190px,1fr);gap:1.1rem;width:min(1120px,100% - 2.5rem);margin:1.3rem auto 0;padding:1.2rem .3rem 1rem;
   overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-color:#2c3277 transparent}
@@ -178,14 +178,17 @@ footer span{margin-right:auto}
 
 <section class="worlds">
   <div class="wrap">
-    <h2>Five worlds down</h2>
-    <p class="say">Each world is ten rooms, and the tenth has someone waiting in it. Clear a room and a chest opens: gold, sometimes new gear, and a pick of three upgrades that stack until the run ends.</p>
+    <h2>Eight worlds down</h2>
+    <p class="say">Each world is ten rooms, and the tenth has someone waiting in it. Clear a room and a chest opens: gold, sometimes new gear, and most of the time a pick of three upgrades that stack until the run ends. Beat all eight and the dungeon goes round again, with every boss changed.</p>
   </div>
-  <div class="reel" tabindex="0" aria-label="The five worlds">
+  <div class="reel" tabindex="0" aria-label="The eight worlds">
     <figure class="world" style="--tint:#8f8bff"><img src="media/world1.jpg" width="720" height="1280" loading="lazy" alt="Wren facing the Gloom King, a crowned pink slime"><figcaption><b>The Undercroft</b><span>Boss: the Gloom King</span></figcaption></figure>
     <figure class="world" style="--tint:#6fe07a"><img src="media/world2.jpg" width="720" height="1280" loading="lazy" alt="Wren facing Mother Mire, a giant frog, in a green dungeon"><figcaption><b>Mosswater Deep</b><span>Boss: Mother Mire</span></figcaption></figure>
     <figure class="world" style="--tint:#ff9a4a"><img src="media/world3.jpg" width="720" height="1280" loading="lazy" alt="Wren facing the Forge Warden in an orange dungeon"><figcaption><b>The Ember Forge</b><span>Boss: the Forge Warden</span></figcaption></figure>
     <figure class="world" style="--tint:#7fd8ff"><img src="media/world4.jpg" width="720" height="1280" loading="lazy" alt="The Rime Queen surrounded by a ring of ice shots"><figcaption><b>The Frost Vault</b><span>Boss: the Rime Queen</span></figcaption></figure>
+    <figure class="world" style="--tint:#ffc24a"><img src="media/world-orchard.jpg" width="720" height="1280" loading="lazy" alt="Wren facing Old Thornback, a huge toad with a flower on its head, in an olive-green dungeon"><figcaption><b>The Hollow Orchard</b><span>Boss: Old Thornback</span></figcaption></figure>
+    <figure class="world" style="--tint:#9fd0ff"><img src="media/world-library.jpg" width="720" height="1280" loading="lazy" alt="The Archivist, a frowning blue crystal, circled by glowing shots in a deep blue dungeon"><figcaption><b>The Sunken Library</b><span>Boss: the Archivist</span></figcaption></figure>
+    <figure class="world" style="--tint:#ffd27a"><img src="media/world-clockwork.jpg" width="720" height="1280" loading="lazy" alt="Wren facing the Brass Regent, a horned brass machine, in a golden dungeon"><figcaption><b>The Clockwork Deep</b><span>Boss: the Brass Regent</span></figcaption></figure>
     <figure class="world" style="--tint:#c79bff"><img src="media/world5.jpg" width="720" height="1280" loading="lazy" alt="The Hollow Star firing a spiral of glowing shots"><figcaption><b>The Starless Hall</b><span>Boss: the Hollow Star</span></figcaption></figure>
   </div>
 </section>
@@ -199,10 +202,10 @@ footer span{margin-right:auto}
     <div>
       <h2>What is in the dungeon</h2>
       <ul>
-        <li><b>5</b><span>bosses, one at the bottom of each world</span></li>
+        <li><b>8</b><span>bosses, one at the bottom of each world</span></li>
         <li><b>9</b><span>kinds of monsters that each need a different answer</span></li>
-        <li><b>22</b><span>upgrades to mix into a new build every run</span></li>
-        <li><b>60</b><span>pieces of gear to buy with gold you earn: lanterns, armour, boots and charms</span></li>
+        <li><b>23</b><span>upgrades to mix into a new build every run</span></li>
+        <li><b>90</b><span>pieces of gear to buy with gold you earn, worn in ten places from lantern and cloak to a ring on each hand. What you wear shows on your hero.</span></li>
         <li><b>3</b><span>heroes. Wren is steady. Pip the fox is quicker on the dodge. Bram the badger is slow and hits hard.</span></li>
         <li><b>2</b><span>challenges, one daily and one weekly, each with its own twist and a gold reward</span></li>
         <li><b>1</b><span>Boss Rush: every boss, back to back, once you have beaten your first</span></li>
