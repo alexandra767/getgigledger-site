@@ -147,7 +147,7 @@ footer span{margin-right:auto}
     <div>
       <h1><span>Wren's</span><span>Lantern</span></h1>
       <p class="lede">A small knight, a big lantern, and a very dark dungeon.</p>
-      <p class="soon"><strong>Out now on iPhone.</strong> One price, $2.99 in the US, then no ads and no in-app purchases.</p>
+      <p class="soon"><strong>Out now on iPhone.</strong> On sale for $0.99 in the US until December 2 (normally $2.99). No ads and no in-app purchases.</p>
       <p class="get"><a href="https://apps.apple.com/us/app/wrens-lantern/id6837796903">Get it on the App Store</a></p>
       <p class="soon">Android is in testing and will follow. To try the Android test build: first <a href="https://groups.google.com/g/wrens-lantern-testers">join the testers group</a>, then <a href="https://play.google.com/apps/testing/com.alexandratitus.wrenslantern">get the game on Google Play</a>. Questions go to <a href="mailto:support@gigledger.org?subject=Wren%27s%20Lantern">support@gigledger.org</a>.</p>
     </div>
@@ -268,6 +268,23 @@ footer span{margin-right:auto}
   v.addEventListener('play',label);v.addEventListener('pause',label);
   if(!still){var p=v.play();if(p&&p.catch)p.catch(function(){});}
   label();
+})();
+</script>
+<!-- Cloudflare Web Analytics: counts visits, no cookies. The owner's own browsers are skipped. -->
+<script>
+(function(){
+  var skip = false;
+  try {
+    if (location.hash === '#owner') localStorage.setItem('skipCount', '1');
+    if (location.hash === '#count-me') localStorage.removeItem('skipCount');
+    skip = localStorage.getItem('skipCount') === '1';
+  } catch (e) {}
+  if (skip) return;
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token": "446fed36a48441a984bcf9f6a4b700b0"}');
+  document.body.appendChild(s);
 })();
 </script>
 </body>

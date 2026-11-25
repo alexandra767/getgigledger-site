@@ -4,7 +4,7 @@
 <style>body{font:17px/1.6 -apple-system,system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 16px;background:#0d0d24;color:#e8e9ff}h1,h2{color:#22e0ff}a{color:#ffd86b}</style></head><body>
 <p><a href="./">Wren's Lantern</a></p>
 <h1>Wren's Lantern: Privacy Policy</h1>
-<p>Last updated: November 21, 2026</p>
+<p>Last updated: November 25, 2026</p>
 <h2>The short version</h2>
 <p>Wren's Lantern does not collect your name, email, location, contacts or anything else that says who you are. It sends a small amount of anonymous information about how the game is running so crashes and problems can be found and fixed. You can turn that off.</p>
 <h2>What stays on your phone</h2>
@@ -12,6 +12,8 @@
 <h2>Anonymous stats</h2>
 <p>The game sends anonymous events through TelemetryDeck, a privacy-focused analytics service. An event says things like: the game was opened, a run started or ended and at which room, a boss was beaten, the game switched to lighter graphics, or the last session ended in a crash. Each event carries the game version, the phone model and system, and a random code made on your phone. That code is scrambled before it is sent and cannot be turned back into you. No advertising ID is used and nothing is shared with advertisers.</p>
 <p>To turn this off: open Settings on the title screen and set Anonymous stats to OFF.</p>
+<h2>This website</h2>
+<p>These web pages count visits with Cloudflare Web Analytics. It uses no cookies and does not identify you. It shows only totals, such as how many people visited a page and which site sent them.</p>
 <h2>What the game does not do</h2>
 <ul><li>No accounts or sign-in</li><li>No ads</li><li>No purchases</li><li>No tracking across other apps or websites</li><li>No access to your contacts, photos, location, camera or microphone</li></ul>
 <h2>Children</h2>
@@ -20,4 +22,21 @@
 <p>If this ever changes, this page will be updated before the change reaches the game.</p>
 <h2>Contact</h2>
 <p>Questions: <a href="mailto:support@gigledger.org">support@gigledger.org</a></p>
+<!-- Cloudflare Web Analytics: counts visits, no cookies. The owner's own browsers are skipped. -->
+<script>
+(function(){
+  var skip = false;
+  try {
+    if (location.hash === '#owner') localStorage.setItem('skipCount', '1');
+    if (location.hash === '#count-me') localStorage.removeItem('skipCount');
+    skip = localStorage.getItem('skipCount') === '1';
+  } catch (e) {}
+  if (skip) return;
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token": "446fed36a48441a984bcf9f6a4b700b0"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body></html>

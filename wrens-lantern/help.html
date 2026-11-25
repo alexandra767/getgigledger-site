@@ -70,4 +70,21 @@
 <p>On the title screen tap Help, then Rate the game at the bottom. It opens the store page, where you can leave stars or a few words. The same button shows on the results screen after you beat a boss.</p>
 <h2>Still stuck?</h2>
 <p>Write to <a href="mailto:support@gigledger.org">support@gigledger.org</a>.</p>
+<!-- Cloudflare Web Analytics: counts visits, no cookies. The owner's own browsers are skipped. -->
+<script>
+(function(){
+  var skip = false;
+  try {
+    if (location.hash === '#owner') localStorage.setItem('skipCount', '1');
+    if (location.hash === '#count-me') localStorage.removeItem('skipCount');
+    skip = localStorage.getItem('skipCount') === '1';
+  } catch (e) {}
+  if (skip) return;
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token": "446fed36a48441a984bcf9f6a4b700b0"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body></html>
