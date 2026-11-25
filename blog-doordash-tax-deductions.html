@@ -360,6 +360,22 @@
     &copy; 2026 GigLedger. All rights reserved.
 </footer>
 
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "446fed36a48441a984bcf9f6a4b700b0"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Cloudflare Web Analytics: counts visits, no cookies. The owner's own browsers are skipped. -->
+<script>
+(function(){
+  var skip = false;
+  try {
+    if (location.hash === '#owner') localStorage.setItem('skipCount', '1');
+    if (location.hash === '#count-me') localStorage.removeItem('skipCount');
+    skip = localStorage.getItem('skipCount') === '1';
+  } catch (e) {}
+  if (skip) return;
+  var s = document.createElement('script');
+  s.defer = true;
+  s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+  s.setAttribute('data-cf-beacon', '{"token": "446fed36a48441a984bcf9f6a4b700b0"}');
+  document.body.appendChild(s);
+})();
+</script>
 </body>
 </html>
